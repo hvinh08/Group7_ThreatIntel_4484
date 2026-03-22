@@ -8,7 +8,7 @@ rule BazarLoader_DLL_EnterDLL {
     meta:
         description = "Detects BazarLoader DLL via EnterDLL export and C2 URI patterns"
         author      = "Victor Hoac"
-        date        = "2025-03-17"
+        date        = "2026-03-17"
         reference   = "https://www.trendmicro.com/en_us/research/21/k/bazarloader-adds-compromised-installers-iso-to-arrival-delivery-vectors.html"
     strings:
         $export  = "EnterDLL" ascii
@@ -32,7 +32,7 @@ rule BazarLoader_ProcessHollowing {
     meta:
         description = "Detects BazarLoader via process hollowing API sequence and BCryptDecrypt"
         author      = "Hoang Vinh Nguyen"
-        date        = "2025-03-17"
+        date        = "2026-03-17"
         reference   = "https://cybersecurity.att.com/blogs/labs-research/trickbot-bazarloader-in-depth"
     strings:
         $api1   = "CreateProcessA" ascii
