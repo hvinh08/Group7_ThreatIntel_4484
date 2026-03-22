@@ -1,0 +1,1025 @@
+{
+    "type": "bundle",
+    "id": "bundle--02c627ff-e33d-4f4d-b2a0-40f7beb3e5f7",
+    "objects": [
+        {
+            "type": "identity",
+            "spec_version": "2.1",
+            "id": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.163693Z",
+            "modified": "2026-03-22T04:18:59.163693Z",
+            "name": "Victor Hoac & Hoang Vinh Nguyen",
+            "identity_class": "individual"
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--374f1088-ba57-4c48-8db2-baa1b860e03b",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.163898Z",
+            "modified": "2026-03-22T04:18:59.163898Z",
+            "name": "BazarLoader",
+            "malware_types": [
+                "backdoor",
+                "trojan",
+                "downloader"
+            ],
+            "is_family": true,
+            "aliases": [
+                "Bazar",
+                "Bazaloader",
+                "KEGTAP",
+                "Team9"
+            ],
+            "first_seen": "2020-04-01T00:00:00Z",
+            "last_seen": "2022-02-28T00:00:00Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/software/S0534/",
+                    "external_id": "S0534"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+            "created": "2017-01-20T00:00:00.000Z",
+            "definition_type": "tlp",
+            "name": "TLP:WHITE",
+            "definition": {
+                "tlp": "white"
+            }
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--b5eb3d22-ba07-4124-a86a-f3443b8397e5",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.164554Z",
+            "modified": "2026-03-22T04:18:59.164554Z",
+            "name": "C2 Domain - forgame.bazar",
+            "description": "Early EmerDNS C2 domain (AT&T AlienLabs)",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name:value = 'forgame.bazar']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2020-04-01T00:00:00Z",
+            "valid_until": "2023-06-01T00:00:00Z",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "command-and-control"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "confidence": 90
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--cf5a534b-5dbd-4196-b6f7-5b092829849b",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.168755Z",
+            "modified": "2026-03-22T04:18:59.168755Z",
+            "name": "C2 Domain - bestgame.bazar",
+            "description": "Early EmerDNS C2 domain (AT&T AlienLabs)",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name:value = 'bestgame.bazar']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2020-04-01T00:00:00Z",
+            "valid_until": "2023-06-01T00:00:00Z",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "command-and-control"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "confidence": 90
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--52bbb5e8-e1f3-446f-8435-39b825945aba",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.169341Z",
+            "modified": "2026-03-22T04:18:59.169341Z",
+            "name": "C2 Domain - englewoodcarwash.us",
+            "description": "C2 domain, January 2021 campaign (Fortinet)",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name:value = 'englewoodcarwash.us']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2020-04-01T00:00:00Z",
+            "valid_until": "2023-06-01T00:00:00Z",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "command-and-control"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "confidence": 90
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--c43284d5-61b2-48f8-bb28-f9cb0ab4cd71",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.170114Z",
+            "modified": "2026-03-22T04:18:59.170114Z",
+            "name": "C2 Domain - gojihu.com",
+            "description": "Cobalt Strike C2 domain post-infection (Unit 42)",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name:value = 'gojihu.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2020-04-01T00:00:00Z",
+            "valid_until": "2023-06-01T00:00:00Z",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "command-and-control"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "confidence": 90
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--888185a8-b390-41bf-a92d-5217f5088bdc",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.170655Z",
+            "modified": "2026-03-22T04:18:59.170655Z",
+            "name": "C2 Domain - yuxicu.com",
+            "description": "Cobalt Strike C2 domain post-infection (Unit 42)",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name:value = 'yuxicu.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2020-04-01T00:00:00Z",
+            "valid_until": "2023-06-01T00:00:00Z",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "command-and-control"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "confidence": 90
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--8f8ec464-8185-45fa-8663-5ba2635ace70",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.171157Z",
+            "modified": "2026-03-22T04:18:59.171157Z",
+            "name": "C2 IP - 104.248.174.225",
+            "description": "BazarLoader C2 server, port 443 (Unit 42)",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[ipv4-addr:value = '104.248.174.225']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2020-04-01T00:00:00Z",
+            "valid_until": "2023-06-01T00:00:00Z",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "command-and-control"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "confidence": 90
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--6fd86f19-016b-4ed8-9e54-415c2e6c1099",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.172044Z",
+            "modified": "2026-03-22T04:18:59.172044Z",
+            "name": "C2 IP - 104.248.166.170",
+            "description": "BazarBackdoor C2 server, port 443 (Unit 42)",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[ipv4-addr:value = '104.248.166.170']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2020-04-01T00:00:00Z",
+            "valid_until": "2023-06-01T00:00:00Z",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "command-and-control"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "confidence": 90
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--1f80503d-8321-4ef4-b791-bcc1547c2bdd",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.172509Z",
+            "modified": "2026-03-22T04:18:59.172509Z",
+            "name": "C2 URI - /data/service",
+            "description": "Payload retrieval URI",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[network-traffic:extensions.'http-request-ext'.request_value LIKE '%/data/service%']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2020-04-01T00:00:00Z",
+            "valid_until": "2023-06-01T00:00:00Z",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "command-and-control"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "confidence": 85
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--8407ebdb-1250-4e53-903a-25432c073260",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.175753Z",
+            "modified": "2026-03-22T04:18:59.175753Z",
+            "name": "C2 URI - /stat/var/upd",
+            "description": "Initial check-in URI",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[network-traffic:extensions.'http-request-ext'.request_value LIKE '%/stat/var/upd%']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2020-04-01T00:00:00Z",
+            "valid_until": "2023-06-01T00:00:00Z",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "command-and-control"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "confidence": 85
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--31fd3765-cf9a-4c71-a516-38b6af652ff5",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.176375Z",
+            "modified": "2026-03-22T04:18:59.176375Z",
+            "name": "C2 URI - /cgi-bin/req5",
+            "description": "C2 communication URI (Fortinet)",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[network-traffic:extensions.'http-request-ext'.request_value LIKE '%/cgi-bin/req5%']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2020-04-01T00:00:00Z",
+            "valid_until": "2023-06-01T00:00:00Z",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "command-and-control"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "confidence": 85
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--5ad11302-bb9a-44bb-a97a-5fee5d9fbf33",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.176933Z",
+            "modified": "2026-03-22T04:18:59.176933Z",
+            "name": "TLS Certificate - amadeamadey.at",
+            "description": "TLS certificates referencing nonexistent domain amadeamadey.at on C2 servers (Sophos)",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[x509-certificate:subject LIKE '%amadeamadey.at%']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2020-04-01T00:00:00Z",
+            "valid_until": "2023-06-01T00:00:00Z",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "command-and-control"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "confidence": 85
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--2ba409a7-6de7-4bfa-a82f-dfc8ef17883b",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.177786Z",
+            "modified": "2026-03-22T04:18:59.177786Z",
+            "name": "Spoofed User-Agent",
+            "description": "Spoofed user-agent with typo 'Window' instead of 'Windows' (Offset)",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[network-traffic:extensions.'http-request-ext'.request_header.'User-Agent' = 'Mozilla/5.0 (Window NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2020-04-01T00:00:00Z",
+            "valid_until": "2023-06-01T00:00:00Z",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "command-and-control"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "confidence": 90
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--4060e544-e45e-4aa8-8b36-d8b54e6904e1",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.179389Z",
+            "modified": "2026-03-22T04:18:59.179389Z",
+            "name": "Sample - Excel dropper (.xlsb) Aug 2021",
+            "description": "Macro-enabled Excel dropper, August 2021 (Unit 42)",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256' = '8662d511c7f1bef3a6e4f6d72965760345b57ddf0de5d3e6eae4e610216a39c1']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2020-04-01T00:00:00Z",
+            "valid_until": "2023-06-01T00:00:00Z",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "command-and-control"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "confidence": 95
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--71b0af21-7d22-4a3a-8611-bd8a3902fc05",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.180461Z",
+            "modified": "2026-03-22T04:18:59.180461Z",
+            "name": "Sample - Initial variant Apr 2020",
+            "description": "BazarLoader/BazarBackdoor initial variant, April 2020 (AT&T AlienLabs)",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256' = '7c93d9175a38c23d44d76d9a883f7f3da1e244c2ab6c3ac9f29a9c9e20d20a5f']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2020-04-01T00:00:00Z",
+            "valid_until": "2023-06-01T00:00:00Z",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "command-and-control"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "confidence": 95
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--c7ec8d27-e5ec-4b0d-ae95-6864cd919755",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.181035Z",
+            "modified": "2026-03-22T04:18:59.181035Z",
+            "name": "Registry - HKCU Run key",
+            "description": "User-level persistence via Run key",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[windows-registry-key:key LIKE '%CurrentVersion\\\\Run%']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2020-04-01T00:00:00Z",
+            "valid_until": "2023-06-01T00:00:00Z",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "persistence"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "confidence": 90
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--dc4b40d7-4566-4366-b7cd-a77ac5f8702b",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.181898Z",
+            "modified": "2026-03-22T04:18:59.181898Z",
+            "name": "Registry - HKLM Run key",
+            "description": "System-level persistence via Run key",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[windows-registry-key:key LIKE '%CurrentVersion\\\\Run%' AND windows-registry-key:key LIKE '%HKLM%']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2020-04-01T00:00:00Z",
+            "valid_until": "2023-06-01T00:00:00Z",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "persistence"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "confidence": 90
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--d14637ac-d8c7-4351-8b99-de992faf0290",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.182972Z",
+            "modified": "2026-03-22T04:18:59.182972Z",
+            "name": "Registry - Winlogon Helper",
+            "description": "Winlogon Helper DLL persistence",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[windows-registry-key:key LIKE '%CurrentVersion\\\\Winlogon%']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2020-04-01T00:00:00Z",
+            "valid_until": "2023-06-01T00:00:00Z",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "persistence"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "confidence": 85
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--6ae50621-1c17-4d12-9b23-9cd17a6aa846",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.183416Z",
+            "modified": "2026-03-22T04:18:59.183416Z",
+            "name": "Process - svchost.exe parent mismatch",
+            "description": "svchost.exe with parent explorer.exe instead of services.exe",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[process:name = 'svchost.exe' AND process:parent_ref.name = 'explorer.exe']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2020-04-01T00:00:00Z",
+            "valid_until": "2023-06-01T00:00:00Z",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "command-and-control"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "confidence": 90
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--9340f299-8c63-43f0-b57d-7673e058ce36",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.18452Z",
+            "modified": "2026-03-22T04:18:59.18452Z",
+            "name": "Process - cmd.exe hollowed",
+            "description": "cmd.exe with no arguments making outbound connections",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[process:name = 'cmd.exe' AND process:command_line = 'cmd.exe']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2020-04-01T00:00:00Z",
+            "valid_until": "2023-06-01T00:00:00Z",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "command-and-control"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "confidence": 85
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--5e49eeef-1eb3-48c0-bc2d-6333888e1b4e",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.185222Z",
+            "modified": "2026-03-22T04:18:59.185222Z",
+            "name": "Process - nltest domain recon",
+            "description": "nltest.exe /domain_trusts /all_trusts for domain reconnaissance",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[process:name = 'nltest.exe' AND process:command_line LIKE '%/domain_trusts%/all_trusts%']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2020-04-01T00:00:00Z",
+            "valid_until": "2023-06-01T00:00:00Z",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "command-and-control"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "confidence": 90
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--ba1f4320-ef63-4649-8784-e12d5f62e472",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.185924Z",
+            "modified": "2026-03-22T04:18:59.185924Z",
+            "name": "Process - net.exe domain enum",
+            "description": "net.exe view /all /domain for network enumeration",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[process:name = 'net.exe' AND process:command_line LIKE '%view%/all%/domain%']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2020-04-01T00:00:00Z",
+            "valid_until": "2023-06-01T00:00:00Z",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "command-and-control"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "confidence": 90
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--c86832ae-d07d-45b4-8ac0-ddbb49a8af58",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.18652Z",
+            "modified": "2026-03-22T04:18:59.18652Z",
+            "name": "Process - certutil decode",
+            "description": "certutil.exe -decode in %PUBLIC% to decode payload",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[process:name = 'certutil.exe' AND process:command_line LIKE '%-decode%PUBLIC%']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2020-04-01T00:00:00Z",
+            "valid_until": "2023-06-01T00:00:00Z",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "command-and-control"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "confidence": 90
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--b8c69da6-cf86-44a9-a542-bd2a2347b5c9",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.187254Z",
+            "modified": "2026-03-22T04:18:59.187254Z",
+            "name": "Process - rundll32 EnterDLL",
+            "description": "rundll32.exe calling EnterDLL export from unusual path",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[process:name = 'rundll32.exe' AND process:command_line LIKE '%EnterDLL%']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2020-04-01T00:00:00Z",
+            "valid_until": "2023-06-01T00:00:00Z",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "command-and-control"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "confidence": 90
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--29a2936d-a694-4ad1-a4c1-179962373fb7",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.188047Z",
+            "modified": "2026-03-22T04:18:59.188047Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--b5eb3d22-ba07-4124-a86a-f3443b8397e5",
+            "target_ref": "malware--374f1088-ba57-4c48-8db2-baa1b860e03b",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--2252c9a4-b68e-4c4f-bc4c-d5a1a1d8e638",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.18816Z",
+            "modified": "2026-03-22T04:18:59.18816Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--cf5a534b-5dbd-4196-b6f7-5b092829849b",
+            "target_ref": "malware--374f1088-ba57-4c48-8db2-baa1b860e03b",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a77d3c14-6753-4bca-8417-7fa8769e5c15",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.188251Z",
+            "modified": "2026-03-22T04:18:59.188251Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--52bbb5e8-e1f3-446f-8435-39b825945aba",
+            "target_ref": "malware--374f1088-ba57-4c48-8db2-baa1b860e03b",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--35055244-c8c1-4c45-88fb-af6bdc14662b",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.188339Z",
+            "modified": "2026-03-22T04:18:59.188339Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--c43284d5-61b2-48f8-bb28-f9cb0ab4cd71",
+            "target_ref": "malware--374f1088-ba57-4c48-8db2-baa1b860e03b",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--b8c9725a-3713-4a45-b556-6a57c573c5f2",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.188426Z",
+            "modified": "2026-03-22T04:18:59.188426Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--888185a8-b390-41bf-a92d-5217f5088bdc",
+            "target_ref": "malware--374f1088-ba57-4c48-8db2-baa1b860e03b",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--608cc21b-3585-47e6-964c-0a4611e501ea",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.188513Z",
+            "modified": "2026-03-22T04:18:59.188513Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--8f8ec464-8185-45fa-8663-5ba2635ace70",
+            "target_ref": "malware--374f1088-ba57-4c48-8db2-baa1b860e03b",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--53bddd0e-fd6d-45b6-9994-129c531432e8",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.188603Z",
+            "modified": "2026-03-22T04:18:59.188603Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--6fd86f19-016b-4ed8-9e54-415c2e6c1099",
+            "target_ref": "malware--374f1088-ba57-4c48-8db2-baa1b860e03b",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--9f711f01-02d0-411a-84aa-2c858fea57f6",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.188688Z",
+            "modified": "2026-03-22T04:18:59.188688Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--1f80503d-8321-4ef4-b791-bcc1547c2bdd",
+            "target_ref": "malware--374f1088-ba57-4c48-8db2-baa1b860e03b",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--c0d1f0c1-5c6a-4aa0-9c0a-602a11c208eb",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.188772Z",
+            "modified": "2026-03-22T04:18:59.188772Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--8407ebdb-1250-4e53-903a-25432c073260",
+            "target_ref": "malware--374f1088-ba57-4c48-8db2-baa1b860e03b",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--c7148072-f846-458b-befc-9b465c925f7a",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.188856Z",
+            "modified": "2026-03-22T04:18:59.188856Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--31fd3765-cf9a-4c71-a516-38b6af652ff5",
+            "target_ref": "malware--374f1088-ba57-4c48-8db2-baa1b860e03b",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--6f43b362-b02b-4934-872a-00613a83db47",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.188946Z",
+            "modified": "2026-03-22T04:18:59.188946Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--5ad11302-bb9a-44bb-a97a-5fee5d9fbf33",
+            "target_ref": "malware--374f1088-ba57-4c48-8db2-baa1b860e03b",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--addd8103-50b5-4d03-b91e-0c518a0b0a8b",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.189029Z",
+            "modified": "2026-03-22T04:18:59.189029Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--2ba409a7-6de7-4bfa-a82f-dfc8ef17883b",
+            "target_ref": "malware--374f1088-ba57-4c48-8db2-baa1b860e03b",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--ebb8b4cd-ed22-4cee-9a25-81bc0f7f21ab",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.189112Z",
+            "modified": "2026-03-22T04:18:59.189112Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--4060e544-e45e-4aa8-8b36-d8b54e6904e1",
+            "target_ref": "malware--374f1088-ba57-4c48-8db2-baa1b860e03b",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--3db87277-7e6e-48a1-a71a-f8d97790bc34",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.189195Z",
+            "modified": "2026-03-22T04:18:59.189195Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--71b0af21-7d22-4a3a-8611-bd8a3902fc05",
+            "target_ref": "malware--374f1088-ba57-4c48-8db2-baa1b860e03b",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--0aac8a36-68de-4d07-995f-f17d65a6f615",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.189284Z",
+            "modified": "2026-03-22T04:18:59.189284Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--c7ec8d27-e5ec-4b0d-ae95-6864cd919755",
+            "target_ref": "malware--374f1088-ba57-4c48-8db2-baa1b860e03b",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--f5f905b3-74e0-42bd-9c16-0c5a63b8e484",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.189367Z",
+            "modified": "2026-03-22T04:18:59.189367Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--dc4b40d7-4566-4366-b7cd-a77ac5f8702b",
+            "target_ref": "malware--374f1088-ba57-4c48-8db2-baa1b860e03b",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--c5890ecc-b5bd-4159-a9bb-8477b12205a0",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.18945Z",
+            "modified": "2026-03-22T04:18:59.18945Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--d14637ac-d8c7-4351-8b99-de992faf0290",
+            "target_ref": "malware--374f1088-ba57-4c48-8db2-baa1b860e03b",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--fbad2bdb-c05b-4541-9dcd-810ccf4f8932",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.189534Z",
+            "modified": "2026-03-22T04:18:59.189534Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--6ae50621-1c17-4d12-9b23-9cd17a6aa846",
+            "target_ref": "malware--374f1088-ba57-4c48-8db2-baa1b860e03b",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--bd7d884a-52ce-401f-9f0a-70dff67dc917",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.189621Z",
+            "modified": "2026-03-22T04:18:59.189621Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--9340f299-8c63-43f0-b57d-7673e058ce36",
+            "target_ref": "malware--374f1088-ba57-4c48-8db2-baa1b860e03b",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--4acb54de-055b-4602-8bab-bac07351aeae",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.189709Z",
+            "modified": "2026-03-22T04:18:59.189709Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--5e49eeef-1eb3-48c0-bc2d-6333888e1b4e",
+            "target_ref": "malware--374f1088-ba57-4c48-8db2-baa1b860e03b",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--8a8094c7-9df2-4864-b5de-d25cbb1954c5",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.189802Z",
+            "modified": "2026-03-22T04:18:59.189802Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--ba1f4320-ef63-4649-8784-e12d5f62e472",
+            "target_ref": "malware--374f1088-ba57-4c48-8db2-baa1b860e03b",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--5aff8788-e059-4123-9978-79c2580d627c",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.189886Z",
+            "modified": "2026-03-22T04:18:59.189886Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--c86832ae-d07d-45b4-8ac0-ddbb49a8af58",
+            "target_ref": "malware--374f1088-ba57-4c48-8db2-baa1b860e03b",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--64b04841-d677-49ee-8cb9-1b8ab682c9df",
+            "created_by_ref": "identity--c1d6845e-bd35-4417-b828-3c67d4edba03",
+            "created": "2026-03-22T04:18:59.189969Z",
+            "modified": "2026-03-22T04:18:59.189969Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--b8c69da6-cf86-44a9-a542-bd2a2347b5c9",
+            "target_ref": "malware--374f1088-ba57-4c48-8db2-baa1b860e03b",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        }
+    ]
+}
