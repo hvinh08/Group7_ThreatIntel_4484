@@ -1,6 +1,6 @@
 # BazarLoader — Malware Case Study
 
-**Course:** EECS 4484 — Computer Security  
+**Course:** EECS 4484 — Malware Analysis 
 **Authors:** Victor Hoac (219828854), Hoang Vinh Nguyen (219420512)  
 **Date:** March 22, 2025
 
