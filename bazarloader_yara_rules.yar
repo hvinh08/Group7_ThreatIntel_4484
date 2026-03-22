@@ -24,7 +24,7 @@ rule BazarLoader_DLL_EnterDLL {
 
 /*
  * BazarLoader YARA Rule 2
- * Authors: Victor Hoac
+ * Authors: Hoang Vinh Nguyen
  * Date: 2025-03-17
  */
 
