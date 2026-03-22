@@ -1,7 +1,7 @@
 /*
  * BazarLoader YARA Rule 1
  * Authors: Victor Hoac
- * Date: 2025-03-17
+ * Date: 2026-03-17
  */
 
 rule BazarLoader_DLL_EnterDLL {
@@ -25,7 +25,7 @@ rule BazarLoader_DLL_EnterDLL {
 /*
  * BazarLoader YARA Rule 2
  * Authors: Hoang Vinh Nguyen
- * Date: 2025-03-17
+ * Date: 2026-03-17
  */
 
 rule BazarLoader_ProcessHollowing {
