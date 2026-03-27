@@ -33,7 +33,7 @@ rule BazarLoader_ProcessHollowing {
         description = "Detects BazarLoader via process hollowing API sequence and BCryptDecrypt"
         author      = "Hoang Vinh Nguyen"
         date        = "2026-03-17"
-        reference   = "https://cybersecurity.att.com/blogs/labs-research/trickbot-bazarloader-in-depth"
+        reference   = "https://www.0ffset.net/reverse-engineering/analysing-the-main-bazarloader/"
     strings:
         $api1   = "CreateProcessA" ascii
         $api2   = "NtWriteVirtualMemory" ascii
